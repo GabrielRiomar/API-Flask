@@ -18,7 +18,6 @@ def create_task():
   new_task = Task(id=task_id_counter, title=data['title'], description=data.get('description', ''), completed=False)
   task_id_counter += 1
   tasks.append(new_task)
-  print(tasks)
   return {'id': new_task.id, 'title': new_task.title, 'description': new_task.description, 'completed': new_task.completed}, 201
 
 # Retrieve all tasks

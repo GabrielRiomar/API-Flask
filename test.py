@@ -36,7 +36,7 @@ def test_get_task():
         assert response.status_code == 200
         assert data['id'] == task_id
     else:
-      pytest.skip("No tasks available to test get_task")
+        pytest.skip("No tasks available to test get_task")
 
 def test_update_task():
     if tasks:
@@ -62,7 +62,7 @@ def test_update_task():
         assert data['description'] == payload['description']
         assert data['completed'] == payload['completed']
     else:
-      pytest.skip("No tasks available to test update_task")
+        pytest.skip("No tasks available to test update_task")
 
 def test_delete_task():
     if tasks:
@@ -81,4 +81,4 @@ def test_delete_task():
         
         tasks.remove(task_id)  # Remove the deleted task ID from the list
     else:
-      pytest.skip("No tasks available to test delete_task")
+        pytest.skip("No tasks available to test delete_task")
